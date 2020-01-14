@@ -69,15 +69,90 @@ output = f'hello world {student1} {student2}'
 
 # print(dt)
 
-input_number_from_user = input("Insert a number >> ")
+# input_number_from_user = input("Insert a number >> ")
 
-print(type(input_number_from_user))
+# print(type(input_number_from_user))
+
+# casted_output = int(input_number_from_user)
+
+# print(type(casted_output))
+
+# some_math = casted_output * 7
+
+# print(some_math)
+
+# age = 26
+
+# if True :
+#     print(age)
+
+# print(age)
+
+# name = input("Enter in your name >> ")
+
+# if (name == "Veronica") :
+#     print(name)
+
+name = "Kazim"
+age = 26 
+
+# if (age <= 25):
+#     print(age)
+
+# if (age != 25):
+#     print('you are not 25')
+    
+# if (age > 25):
+#     print('you are over 25')
+
+# if age >= 21:
+#   print("You get free beer")
+# else:
+#   print("Sorry no beer for you")
+
+# if age >= 21:
+#   print("You get free beer")
+# elif age < 18:
+#   print("What are you even doing here?")
+# else:
+#   print("Sorry no beer for you")
+
+# greeting = "Hello {}, it is very nice to meet you and your friend {}!"
+# name_of_user = input("What is your name? ")
+# length_of_name = len(name_of_user)
+# if length_of_name > 0:
+#     name_of_friend = input("What is your friend's name? ")
+#     print(greeting.format(name_of_user, name_of_friend))
+# else:
+#     print("OK, I'll ask again some other time.")
+    
+# name_of_user = input("What is your name? ")
 
 
-casted_output = int(input_number_from_user)
+# length_of_name = len(name_of_user)
+# if length_of_name > 0:
+#     name_of_friend = input("What is your friend's name? ")
+#     greeting = f"Hello {name_of_user}, it is very nice to meet you and your friend {name_of_friend}!"
+#     print(greeting)
+# else:
+#     print("OK, I'll ask again some other time.")
 
-print(type(casted_output))
+# count = 0
 
-some_math = casted_output * 7
+# while (count < 10):
+#     # print("the count is ", count)
+#     count += 1
+#     print("the count is ", count)
 
-print(some_math)
+# answer = ''
+# while answer != 'when':
+#   answer = input('Say when: ')
+#   answer = answer.lower()
+# print("Cheese")
+
+# while True:
+#   answer = input('Say when: ')
+#   if answer.lower() == 'when':
+#     break
+# print("Cheese")
+    
