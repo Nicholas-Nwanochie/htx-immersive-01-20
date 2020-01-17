@@ -185,9 +185,14 @@
 #     print(character)
 
 
-for index in range(10):
-    print(index)
+# for index in range(10):
+#     print(index)
     
-Create a loop that prints out every other numbers
+# Create a loop that prints out every other numbers
 
-1, 3, 5, 7, .....1000
+# 1, 3, 5, 7, .....1000
+
+
+alphabet = "abc def ghi"
+
+for char in alphabet:
