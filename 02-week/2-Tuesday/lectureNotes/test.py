@@ -303,7 +303,7 @@
 #       self.__reset_count()
 #     else:
 #       print("Hello", self.name)
-      
+
 #   def __reset_count(self):
 #     self.count = 0
     
@@ -334,63 +334,102 @@
 
 # print(reversed)
 
-class Parent():
+# class Parent():
     
-    def implicit(self):
-            print("PARENT implicit()")
+#     def implicit(self):
+#             print("PARENT implicit()")
             
-    def override(self):
-            print("PARENT override()")
+#     def override(self):
+#             print("PARENT override()")
     
-    def altered(self):
-            print("PARENT altered()")
+#     def altered(self):
+#             print("PARENT altered()")
 
             
-class Child(Parent):
+# class Child(Parent):
     
-    def override(self):
-            print("CHILD override()")
+#     def override(self):
+#             print("CHILD override()")
             
-    def altered(self):
-            print("CHILD, BEFORE PARENT altered()")
-            super(Child, self).altered()
-            super(Child, self).implicit()
-            print("CHILD, AFTER PARENT altered()")
+#     def altered(self):
+#             print("CHILD, BEFORE PARENT altered()")
+#             super(Child, self).altered()
+#             super(Child, self).implicit()
+#             print("CHILD, AFTER PARENT altered()")
 
 # dad = Parent()
 # dad.altered()
 # dad.override()
 # dad.implicit()
 
-son = Child()
+# son = Child()
 # son.altered()
 # son.override()
 
-son.implicit()
+# son.implicit()
 
-class Grandparent:
-    def __init__(self, num):
-        pass
+# class Grandparent:
+#     def __init__(self, num):
+#         pass
     
-class Character(Grandparent):
-    def __init__(self, name, power, health):
-        self.name = name
-        self.power = power 
-        self.health = health
-        super(Character, self).__init__(4)
+# class Character(Grandparent):
+#     def __init__(self, name, power, health):
+#         self.name = name
+#         self.power = power 
+#         self.health = health
+#         super(Character, self).__init__(4)
         
 
-class Goblin(Character):
-    pass
+# class Goblin(Character):
+#     pass
     
-class Hero(Character):
+# class Hero(Character):
     
-    def __init__(self, weapon, name, power, health):
-        self.weapon = weapon 
-        super(Hero, self).__init__(name, power, health)
+#     def __init__(self, weapon, name, power, health):
+#         self.weapon = weapon 
+#         super(Hero, self).__init__(name, power, health)
     
 
-alina = Hero("pink gun", "alina", 3, 10)
+# alina = Hero("pink gun", "alina", 3, 10)
 
-print(alina.health)
+# print(alina.health)
+
+
+def letter_histogram(word):
+    dictOfLetters = {}
+    for letter in word:
+        if letter in dictOfLetters:
+            dictOfLetters[letter] += 1
+        else:
+            dictOfLetters[letter] = 1
+
+    return dictOfLetters
+
+
+# print(letter_histogram("bananas"))
+
+def word_histogram(paragraph):
+    dictOfWords = {}
+    paragraph = paragraph.lower().split()
+    for word in paragraph:
+        if word in dictOfWords:
+            dictOfWords[word] += 1
+        else:
+            dictOfWords[word] = 1
+    return dictOfWords
+
+# print(word_histogram("To be or not to be"))
+
+def top3(dict):
+    topList = []
+    for i in range(0, 3):
+        max1 = (max(dict.values()))
+        for item in dict:
+            if dict[item] == max1:
+                topList.append(item)
+                break
+        del dict[item]
+    print(topList)
         
+
+top3(letter_histogram("bananas ssssss"))
