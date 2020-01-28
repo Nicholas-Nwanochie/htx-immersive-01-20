@@ -1,0 +1,67 @@
+a{
+    font-size: 30px;
+    text-decoration: none;
+    color: red;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: white;
+    background-color: green;
+}
+
+a:visited {
+
+    color: orange;
+}
+
+p, div{
+    height: 50px;
+    background-color:#E2A83D;
+    color: white;
+    font-size: 20px;
+}
+
+p, div{
+    height: 50px;
+    background-color:black;
+    color: white;
+    font-size: 20px;
+}
+
+li:nth-child(2){
+    height: 50px;
+    background-color:#E2A83D;
+    color: white;
+    font-size: 20px;
+}
+
+#diego{
+    color: purple;
+}
+
+.light{
+    background-color:yellow;
+    height: 50px;
+    font-size: 20px;
+    color: black;
+}
+
+h3 + p{
+    color: purple;
+    
+}
+
+body{
+    background-color: salmon;
+}
+
+.myClassRule{
+    background-color: orangered;
+    color: yellowgreen;
+}
+
+#myIdRule{
+    background-color: green;
+    color: white
+}
