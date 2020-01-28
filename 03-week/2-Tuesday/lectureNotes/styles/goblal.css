@@ -8,6 +8,7 @@ a:hover {
     text-decoration: underline;
     color: white;
     background-color: green;
+    
 }
 
 a:visited {
@@ -58,10 +59,11 @@ body{
 
 .myClassRule{
     background-color: orangered;
-    color: yellowgreen;
+    color: yellowgreen !important;
 }
 
 #myIdRule{
     background-color: green;
-    color: white
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
