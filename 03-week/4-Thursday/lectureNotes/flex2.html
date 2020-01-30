@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+    
+        nav{
+            display: flex;
+            justify-content: space-around;
+            background-color: skyblue;
+            color: white;
+        }
+
+        nav ul{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav li{
+            list-style: none;
+        }
+
+        nav a{
+            text-decoration: none;
+            color: white;
+
+        }
+
+        nav a:hover{
+            text-decoration: underline;
+        }
+
+        .fg1{
+            flex-grow: 1;
+        }
+
+        .fg4{
+            flex-grow: 4;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <ul class="fg4">
+
+            <li><a href="#">Company Name</a></li>
+        </ul>
+
+        <ul class="fg1">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>
