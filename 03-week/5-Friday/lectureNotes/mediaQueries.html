@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+    
+        .myDiv{
+            background-color: red;
+            color: white;
+            height: 300px;
+            width: 250px;
+        }
+
+        .container{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media screen and (max-width: 400px){
+
+            .myDiv{
+                background-color: yellow;
+                color:black;
+                height: 200px;
+                margin-bottom: 15px;
+            }
+
+            .container{
+                display: flex;
+                flex-direction: column;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="myDiv">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum cumque fugiat omnis neque doloremque aperiam. Vitae, optio odio nostrum ratione nihil consequatur. Inventore dolore iure et, ad rerum magni quos!
+        </div>
+
+        <div class="myDiv">
+
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor optio ad et nisi amet. Nisi saepe repellendus, voluptates iste magnam quaerat corporis quisquam esse id, sapiente ipsam soluta praesentium nam.
+        </div>
+
+    </div>
+</body>
+</html>
