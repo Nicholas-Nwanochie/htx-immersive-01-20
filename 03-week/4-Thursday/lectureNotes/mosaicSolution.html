@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            align-items:stretch;
+            border: solid black 3px;
+        }
+
+        .flexContainer{
+            display:flex;
+            flex-direction: row;
+            height: 100%;
+            align-items: stretch;
+            background-color: green;
+            color: red;
+            
+        }
+
+        .flexContainerColumn {
+            display:flex;
+            flex-direction: column;
+            height: 100%;
+            align-items: stretch;
+            background-color: green;
+            color: red;
+            
+        }
+
+        .fs2{
+            flex-shrink: 2;
+        }
+        .flex1{
+            
+            flex: 1;
+             
+        }
+
+        .flex2{
+            
+            flex: 2;
+
+        }
+
+        .flex3{
+            
+            flex:3;
+
+        }
+
+        .flex4{
+            
+            flex: 4;
+        }
+        .flex5{
+            
+            flex: 5;
+        }
+
+        .flex6{
+            
+            flex: 6;
+        }
+
+        .flex7{
+            
+            flex: 7;
+        }
+
+        .flex8{
+            
+            flex: 8;
+        }
+
+        .cRed{
+            background-color: red;
+            border: solid #666666 3px;
+        }
+
+        .cYellow{
+            background-color: yellow;
+            border: solid #666666 3px;
+        }
+
+        .cGreen{
+            background-color: green;
+            border: solid #666666 3px;
+        }
+        .cWhite{
+            background-color: white;
+            border: solid #666666 3px;
+        }
+        .cBlue{
+            background-color: blue;
+            border: solid #666666 3px;
+        }
+        .cBlack{
+            background-color: black;
+            border: solid #666666 3px;
+        }
+        .noBorder, .noLeftBorder, .noLeftBorder{
+            border:none;
+        }
+        
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="flex1 cYellow">
+
+            <div class="flexContainerColumn">
+                <div class="flexContainer flex1">
+                    <div class="flex1 cWhite">1</div>
+                    <div class="flex4 cWhite">2</div>
+                </div><!--first column: top container-->
+                
+                <div class="flexContainer flex8">
+                    <div class="flex1 cWhite">
+                        <div class="flexContainerColumn">
+                            <div class="flex2 cWhite">3</div>
+                            <div class="flex3 cWhite">4</div>
+                            <div class="flex3 cYellow">5</div>
+                            <div class="flex1 cWhite noBorder">6</div>
+                        </div>
+                    </div><!--first column: middle container-->
+
+                    <div class="flex4 cWhite">
+                        <div class="flexContainerColumn">
+                            <div class="flex7 cRed">6</div>
+                            <div class="flex6 cYellow">
+                            
+                                <div class="flexContainer">
+                                    <div class="flex1 cWhite noLeftBorder">
+                                        <div class="flexContainerColumn">
+                                            <div class="flex7 cBlack">8</div>
+                                            <div class="flex7 cWhite">9</div>
+                                            <div class="flex4 cWhite noBorder">9a</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex1 cWhite">
+                                        <div class="flexContainerColumn">
+                                            <div class="flex1 cWhite">10</div>
+                                            <div class="flex1 cWhite">11</div>
+                                            <div class="flex1 cBlack">12</div>
+
+                                            <div class="flex3 flexContainer">
+                                                <div class="flex1 cYellow">13</div>
+                                                <div class="flex1 cWhite">14</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <!--endof flex column-->
+                    </div>
+                </div>
+
+
+                <!-- <div class="flex1 cWhite">
+                    excluded white column
+                </div> -->
+            </div><!--flexContainerColumn-->
+        </div><!-- first main column-->
+
+        <div class="flex1 cRed">
+            <div class="flexContainerColumn">
+                <div class="flex3 cWhite">
+                    <div class="flexContainer">
+                        <div class="flex1 cYellow">
+                            <div class="flexContainerColumn">
+                                <div class="flex2 cYellow">1</div>
+                                <div class="flex4 cYellow">2</div>
+                                <div class="flex7 cWhite">
+                                        <div class="flexContainer">
+                                            <div class="flex1 cWhite"></div>
+                                            <div class="flex1 cWhite"></div>
+                                        </div>   
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex1 cYellow">
+                            <div class="flexContainerColumn">
+                                <div class="flex3 cBlue">5</div>
+                                <div class="flex3 cRed">6</div>
+                                <div class="flex1 cWhite">7</div>
+                            </div>
+                        </div>
+                    
+                    </div>
+
+                    
+                </div><!--end of flex3- top of 2nd column-->
+                <div class="flex2 cWhite">
+                    <div class="flexContainer">
+                        <div class="flex1 cYellow">
+                            <div class="flexContainerColumn">
+                                <div class="flex1 cWhite">1</div>
+                                <div class="flex3 cBlue">2</div>
+                                <div class="flex3 cRed">3</div>
+                            </div>
+                        </div>
+                        <div class="flex1 cYellow">
+                            <div class="flexContainerColumn">
+                                <div class="flex5 cWhite">
+                                    <div class="flexContainer">
+                                        <div class="flex1 cWhite"></div>
+                                        <div class="flex1 cWhite"></div>
+                                    </div>
+                                </div>
+                                <div class="flex5 cYellow">5</div>
+                                <div class="flex2 cWhite">
+                                    <div class="flexContainer">
+                                        <div class="flex1 cWhite"></div>
+                                        <div class="flex1 cBlack"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--second main column-->
+        <div class="flex1 cGreen">
+            <div class="flexContainerColumn">
+                <div class="flex1 cWhite">
+                    <div class="flexContainer">
+                        <div class="flex1 cYellow">a</div>
+                        <div class="flex1 cBlack">b</div>
+                        <div class="flex3 cWhite">c</div>
+                    </div>
+                </div>
+
+                <div class="flex7 cWhite">
+                    <div class="flexContainer">
+                        <div class="flex5 cWhite">
+                            <div class="flexContainerColumn">
+                                <div class="flex1 cWhite">
+                                    <div class="flexContainer">
+                                        <div class="flex1 cWhite">
+                                            <div class="flexContainerColumn">
+                                                <div class="flex1 cYellow">1</div>
+                                                <div class="flex1 cBlack">2</div>
+                                                <div class="flex1 cWhite">3</div>
+                                                <div class="flex1 cWhite">4</div>
+                                            </div>
+                                        </div>
+                                        <div class="flex1 cWhite">
+                                            <div class="flexContainerColumn">
+                                                <div class="flex1 cWhite">1</div>
+                                                <div class="flex1 cBlack">2</div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex1 cBlue">22</div>
+                            </div>
+                        </div>
+
+                        <div class="flex1 cWhite">
+                            <div class="flexContainerColumn">
+                                <div class="flex3 cYellow">9</div>
+                                <div class="flex3 cWhite">10</div>
+                                <div class="flex2 cWhite">11</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex1 cWhite">
+                    <div class="flexContainer">
+                        <div class="flex3 cWhite"></div>
+                        <div class="flex2 cWhite"></div>
+                    </div>
+                </div>
+            </div>
+        </div> <!--third main column-->
+    </div>
+</body>
+</html>

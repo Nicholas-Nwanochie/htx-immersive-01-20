@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .container{
+            width: 65vw;
+            height:90vh;
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            margin-left: auto;
+            margin-right:auto;
+            margin-top:25px;
+            border: solid black 5px;
+        }
+
+        .flexContainerRow{
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            align-items: stretch;
+        }
+
+        .flexContainerColumn{
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            align-items: stretch;
+        }
+
+        .flex1{
+            flex: 1
+        }
+
+        .flex2{
+            flex: 2;
+            
+        }
+
+        .flex3{
+            flex: 3
+        }
+
+        .flex4{
+            flex: 4
+        }
+
+        .flex5{
+            flex: 5
+        }
+
+        .red{
+            background-color: red;
+        }
+
+        .yellow{
+            background-color: yellow;
+        }
+
+        .green{
+            background-color: green;
+        }
+
+        .red{
+            background-color: red;
+        }
+
+        .blue{
+            background-color: blue;
+        }
+
+        .white{
+            background-color: white;
+        }
+
+        .black{
+            background-color: black;
+        }
+
+        .pink{
+            background-color: pink;
+        }
+
+        .purple{
+            background-color: purple;
+        }
+
+        .border{
+            border: solid black 2px;
+        }
+
+        .noBorder-top{
+            border-top: none;
+        }
+
+        .noBorder-bottom{
+            border-bottom: none;
+        }
+
+        .noBorder-left{
+            border-left: none;
+        }
+
+        .noBorder-right{
+            border-right: none;
+        }
+
+        body{
+            background: #666666;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container red">
+        <div class="yellow flex1">
+            first container child of container
+        </div>
+
+        <div class="green flex1 flexContainerRow">
+
+            <div class="purple flex1 flexContainerColumn">
+                <div class="yellow border noBorder-top flex2"></div>
+                <div class="yellow border flex4"></div>
+
+                <div class="white flex4 flexContainerRow" >
+
+                    <div class="white border flex2"></div>
+                    <div class="white border flex2"></div>
+                </div>
+
+                <div class="white border flex2"></div>
+                <div class="blue border flex4"></div>
+                <div class="red border flex4"></div>
+            </div>
+
+            <div class="pink flex1 flexContainerColumn">
+
+                <div class="blue border noBorder-top flex4"></div>
+                <div class="red border flex4"></div>
+                <div class="white border flex2"></div>
+
+                <div class="white border flex4 flexContainerRow">
+                    <div class="white border flex2"></div>
+                    <div class="white border flex2"></div>
+                </div>
+
+                <div class="yellow border flex4"></div>
+                <div class="white border flex2 flexContainerRow">
+                    <div class="white border flex2"></div>
+                    <div class="black border flex2"></div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="red flex1">
+            third container - child of container
+        </div>
+    </div>
+</body>
+</html>
