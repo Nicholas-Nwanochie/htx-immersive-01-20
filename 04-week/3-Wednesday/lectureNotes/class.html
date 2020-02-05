@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .hello{
+            width: 100%;
+            min-height: 100px;
+            background-color: coral;
+        }
+
+        .goodbye{
+            width: 100%;
+            min-height: 100px;
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    
+    <img src="https://cdn3-www.dogtime.com/assets/uploads/2018/10/puppies-cover.jpg" alt="">
+    <div id="myFirstID">
+
+        Lorem ipsum dolor sit amet consectetur 
+        adipisicing elit. Repellat dolor laudantium 
+        soluta exercitationem animi sapiente voluptatum 
+        libero voluptatibus facere similique pariatur deleniti, 
+        quos, nam nihil mollitia quidem iusto beatae delectus.
+    </div>
+
+
+    <div class="hello">
+        first hello
+    </div>
+    <div class="goodbye"></div>
+    <div class="hello">
+        second hello
+    </div>
+    <div class="goodbye"></div>
+    <div class="hello">
+        third hello
+    </div>
+    <div class="goodbye"></div>
+    <div class="hello">
+        fourth hello
+    </div>
+
+
+    <script>
+
+        var imgArray = document.getElementsByTagName('img');
+
+        imgArray[0].setAttribute("src", "data:image/jpeg;base64,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")
+
+        console.log(imgArray[0])
+    
+    // var elements = document.getElementsByClassName('hello');
+
+    // console.log(elements)
+    // console.log(elements.item(0))
+
+    // console.log(elements[1])
+    // if( elements.length >= 1){
+    // var firstItem = elements.item(0);
+    // }
+    </script>
+</body>
+</html>
