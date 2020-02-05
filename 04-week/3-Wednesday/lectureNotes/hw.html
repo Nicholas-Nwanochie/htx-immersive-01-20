@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .header{
+            background-color: blue;
+            color: white;
+            min-height: 200px;
+            text-align: left;
+            padding: 15px;
+
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+
+
+    </div>
+
+
+    <script>
+        
+        var headerDiv = document.createElement('div');
+
+        headerDiv.setAttribute("class", "header");
+
+        headerDiv.innerHTML = "<h1>High On Coding</h1>"
+
+        var containerDiv = document.querySelector('.container');
+
+        containerDiv.append(headerDiv);
+
+        
+    </script>
+</body>
+</html>
