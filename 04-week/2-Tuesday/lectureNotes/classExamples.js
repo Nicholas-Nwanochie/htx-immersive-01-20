@@ -32,11 +32,11 @@
 // console.log(myString.length)
 
 
-var num = 1; //integer
+// var num = 1; //integer
 
-var num2 = 1.2;  //float
+// var num2 = 1.2;  //float
 
-var myString = "school";
+// var myString = "school";
 // console.log(myString.length)
 
 // var concat = "hello" + "world world hello world";
@@ -101,7 +101,7 @@ var myString = "school";
 // }
 
 
-// expr = "Papayas";
+// var expr = "Papayas";
 
 // switch(expr){
 
@@ -120,6 +120,173 @@ var myString = "school";
 
 // }
 
+// var count = 0;
+
+// while (count < 10){
+    
+//     console.log(count);
+//     // count = count +1;
+//     count++;
+    
+// }
+
+
+// for(var count = 0; count < 10; count++){
+
+//     console.log(count);
+
+//     for(var inner = 0; inner < 3; inner++){
+
+//         console.log(inner)
+//     }
+// }
+
+// var lottoNum = [];
+
+// lottoNum.push(3);
+
+// console.log(lottoNum);
+
+// lottoNum.push(34);
+
+// console.log(lottoNum);
+
+
+// /// [3, 34]
+
+// lottoNum.pop();
+
+// console.log(lottoNum)
+
+
+// var lottoNums = [23, 11, 43, 19, 37, 16];
+
+// var newNum = lottoNums.splice(2, 2)
+
+
+// console.log(newNum)
+// console.log(lottoNums)
+
+// var animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+
+// var newAnimals = animals.slice(2, -1)
+// console.log(animals);
+// console.log(newAnimals)
 
 
 
+// lottoNums.shift()
+
+// console.log(lottoNums)
+
+
+// console.log(lottoNums[20]);
+
+// lottoNums[1] = "hello";
+
+// console.log(lottoNums)
+
+var words = 'oh hey how is it going';
+
+
+// var reverse = "";
+
+// for (var i = 0; i< words.length; i++){
+
+//     // console.log(words[i]);
+
+//     reverse = words[i] + reverse;
+// }
+
+// console.log(reverse)
+
+// var newArray = words.split('');
+
+// newArray.reverse();
+
+// words2 = newArray.join('');
+
+// console.log(words2);
+
+
+
+// var reverse = newArray.reverse();
+// console.log(reverse);
+// console.log(newArray);
+
+
+
+// var words2 = newArray.join(' ');
+
+// console.log(words2);
+
+// var newArray = words.split('how');
+
+// console.log(newArray.pop())
+
+// console.log(newArray)
+
+
+// var myArray = [1, 2, 5, 7, 3];
+
+// for (var i = 0; i < myArray.length; i++){
+
+//     console.log(myArray[i]);
+
+// }
+
+// var characterSheet = {
+//     name: 'tim berners-lee',
+//     title: 'sir',
+//     powers: 'invent the web'
+// }
+
+// console.log(characterSheet["name"])
+
+// var characterSheet = {}
+
+// characterSheet["name"] = "Tim berners-lee"
+
+
+// console.log(characterSheet)
+
+// var characterSheet = {
+//     name: 'tim berners-lee',
+//     title: 'sir',
+//     powers: 'invent the web'
+// };
+// characterSheet["name"]
+
+// console.log(characterSheet);
+
+// delete characterSheet["title"];
+
+// console.log(characterSheet);
+
+// var key = "name";
+
+// var keys = ["name", "title", "powers"]
+
+// for( var index = 0; index < keys.length; index++){
+//     var keyName = keys[index];
+//     console.log(characterSheet[keyName]);
+// }
+
+// characterSheet[key];
+
+// console.log(characterSheet[key])
+
+
+// def hello():
+//     pass
+
+function hello(fname, lname){
+
+    console.log("hello " + fname + " " + lname);
+
+    return "sldjls;j;lskdjf"
+}
+
+var myReturn = hello("Alina", "Belova");
+
+console.log(myReturn)

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="main">
+
+        <ul>
+            <li>Monday</li>
+
+        </ul>
+    </div>
+
+
+    <script>
+
+        function appendElementToDOM(tagName, parentNode, innerText){
+
+            var newDOMElement = document.createElement(tagName);
+
+            if (innerText.length > 0){
+                newDOMElement.textContent = innerText;
+            }
+
+            parentNode.append(newDOMElement);
+
+            return newDOMElement;
+        }
+
+
+        var days = ["Monday", "Tuesday","Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+
+
+        var newDayList = days.map(function(day){
+
+            return "<li>" + day + "</li>"
+
+        })
+
+         console.log(newDayList)
+
+        //  var mainNode = document.getElementById('main');
+         
+         var ulNode = document.querySelector('ul');
+
+         ulNode.innerHTML = newDayList.join('');
+
+
+         /*************************/ 
+
+         const companies = [
+            {name: "Company One", category: "Finance", start: 1981, end: 2003},
+            {name: "Company Two", category: "Retail", start: 1992, end: 2008},
+            {name: "Company Three", category: "Auto", start: 1999, end: 2007},
+            {name: "Company Four", category: "Retail", start: 1989, end: 2010},
+            {name: "Company Five", category: "Technology", start: 2009, end: 2014},
+            {name: "Company Six", category: "Finance", start: 1987, end: 2010},
+            {name: "Company Seven", category: "Auto", start: 1986, end: 1996},
+            {name: "Company Eight", category: "Technology", start: 2011, end: 2016},
+            {name: "Company Nine", category: "Retail", start: 1981, end: 1989}
+            ];
+
+            const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
+
+
+    </script>
+</body>
+</html>
