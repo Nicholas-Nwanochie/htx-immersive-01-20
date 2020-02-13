@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <!-- <form action="/somepath.html" id="myForm" method="GET"> -->
+
+        <!-- <fieldset>
+            <legend>First Name</legend>
+            <input type="text" name="firstName" minlength="2" maxlength="15" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Last Name</legend>
+            <input type="text" name="lastName" minlength="2" maxlength="15" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>amount</legend>
+            <input type="number" name="amount" required value="1" min="1" max="10" >
+        </fieldset> -->
+
+
+        <!-- <fieldset>
+            <legend>html or css</legend>
+            <input id="hc" type="text" name="htmlOrCSS" required pattern="html|css">
+        </fieldset>
+
+        <input type="submit">
+    </form> -->
+
+
+    <!-- <form action="">
+
+        <input type="text">
+
+        <input type="radio">
+
+        <input type="checkbox">
+
+        <input type="password">
+
+    </form> -->
+
+
+    <!-- <form action="/action_page.js" method="POST">
+
+        <fieldset>
+            <legend>First name:</legend><br>
+        <input type="text" name="Mickey" value="Mickey"><br>
+        Last name:<br>
+        <input type="text" name="lastname" value="Mouse"><br><br>
+        
+    </fieldset>
+        <input type="submit" value="Submit">
+      </form> -->
+
+
+      <!-- <form id="myForm">
+        Enter name: 
+        <input name="brand" type="radio" value="volvo">
+        <input name="brand" type="radio" value="saab">
+        <input name="brand" type="radio" value="bmw">
+
+        <input type="submit" value="Submit">
+      </form> -->
+
+      <form id="myForm">
+        Enter brand: 
+        <input id="hi" name="brand" type="text" value="volvo">
+        <input name="brand" type="radio" value="saab">
+        <input name="brand" type="radio" value="bmw">
+
+        <input type="submit" value="Submit">
+      </form>
+
+
+    <script
+  src="http://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+  <script>
+
+    //   let myFunction = ()=>{
+
+    //     alert('form was submitted');
+    //   }
+
+    $(()=>{
+
+
+        // $('#hi').change((e)=>{
+
+        // })
+
+        $('#hi').change((e)=>{
+
+           
+
+            console.log($('#hi').val());
+        })
+        // $('#myForm').submit((e)=>{
+        //     e.preventDefault();
+        //     // console.log($('input:checked').val())
+
+        //     let $result = $('#hi').is(':checked');
+
+        //     console.log($result)
+        // })
+
+        // $('#myForm').submit((e)=>{
+
+        //     e.preventDefault();
+        //     alert("form was submitted");
+
+        //     console.log($('#hc').val());
+        // })
+    })
+  </script>
+</body>
+</html>
