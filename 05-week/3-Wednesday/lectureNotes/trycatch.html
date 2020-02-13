@@ -71,12 +71,12 @@
         let division = (a, b) => {
 
             try{
-                let div = a/b;
+                let div = a/c;
 
                 return div;
             }
             catch(e){
-                if (e instanceof Infinity){
+                if (e instanceof RangeError){
                     return "division by zero is not allowed"
                 }
                 else{
@@ -91,7 +91,7 @@
         let p = document.getElementById("demo");
        
 
-        let result = division(3, "njumber");
+        let result = division(3);
 
         p.textContent = result;
         

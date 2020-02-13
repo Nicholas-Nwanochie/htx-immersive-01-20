@@ -93,9 +93,9 @@
 // // console.log(result);
 
 
-let pattern = /\s\s/g
-let str = "This is  a very  long  day";
+// let pattern = /\s\s/g
+// let str = "This is  a very  long  day";
 
-let result = str.replace(pattern, " ");
+// let result = str.replace(pattern, " ");
 
-console.log(result);
+// console.log(result);
