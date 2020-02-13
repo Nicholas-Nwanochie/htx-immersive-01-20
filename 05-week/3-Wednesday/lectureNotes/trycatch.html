@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p{
+            color:red;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <p id="demo"></p>
+    
+
+    <script>
+        // try{
+        //     allllert("Hello World");
+        // }
+        // catch(error){
+
+        //     let p = document.getElementById('demo');
+        
+        //     p.textContent = error.message;
+        // }
+
+        // let num = 1;
+        // try {
+        //     num.toPrecision(500);   // A number cannot have 500 significant digits
+        // }
+        // catch(err) {
+        //     document.getElementById("demo").innerHTML = err.name;
+        // }
+
+        // try {
+        //     eval("alert('Hello)");   // Missing ' will produce an error
+        // }
+        // catch(err) {
+        // document.getElementById("demo").innerHTML = err.name;
+        // }
+
+        // var num = 1;
+        // try {
+        //     num.toUpperCase();   // You cannot convert a number to upper case
+        // }
+        // catch(err) {
+        //     document.getElementById("demo").innerHTML = err.name;
+        // }
+
+        // var x;
+        // try {
+        //     x = y + 1;   // y cannot be referenced (used)
+        // }
+        // catch(err) {
+        //     document.getElementById("demo").innerHTML = err.name;
+        // }
+
+        // try {
+        // decodeURI("%%%");   // You cannot URI decode percent signs
+        // }
+        // catch(err) {
+        // document.getElementById("demo").innerHTML = err.name;
+        // }
+
+
+        let division = (a, b) => {
+
+            try{
+                let div = a/b;
+
+                return div;
+            }
+            catch(e){
+                if (e instanceof Infinity){
+                    return "division by zero is not allowed"
+                }
+                else{
+                    return e.message;
+                }
+                
+            }
+
+          
+        }
+
+        let p = document.getElementById("demo");
+       
+
+        let result = division(3, "njumber");
+
+        p.textContent = result;
+        
+        
+    </script>
+</body>
+</html>
