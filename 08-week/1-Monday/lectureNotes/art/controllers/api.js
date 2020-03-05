@@ -50,7 +50,7 @@ router.delete('/api/:id', (req, res) => {
   
     feedbackData.splice(req.params.id, 1);
 
-    fs.writeFile('app/data/feedback.json', JSON.stringify(feedbackData), 'utf8', (err) => {
+    fs.writeFile('data/feedback.json', JSON.stringify(feedbackData), 'utf8', (err) => {
       
         if(err){
             console.log(err);
