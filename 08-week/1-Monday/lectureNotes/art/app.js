@@ -16,6 +16,8 @@ app.set('view engine', "ejs");
 // index.js
 app.use(require('./controllers/index'));
 app.use(require('./controllers/speaker'));
+app.use(require('./controllers/feedback'));
+app.use(require('./controllers/api'))
 // speakers
 
 app.listen(3000, () => {
