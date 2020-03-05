@@ -5,6 +5,8 @@
 
 let form = document.querySelector('form');
 
+console.log(form)
+
 //attach eventlister to form element 
 
 form.addEventListener('submit', (e) => {
@@ -12,9 +14,9 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
 //retrieve data from form 
     let email = document.getElementById('email');
+    console.log('form submitted')
 
     console.log(email.value);
-
 
     let isValid = document.getElementById('isValid');
     console.log(isValid.value);
@@ -29,9 +31,10 @@ form.addEventListener('submit', (e) => {
 
     // fetch call back to server
 
+    
     fetch('/', {
         method: 'POST',
-        header: {'Content-Type': 'application/json'},
+        headers: {'Content-Type': 'application/json'},
         body: {
             'email': email.value,
             'isValid': isValid.value, 
