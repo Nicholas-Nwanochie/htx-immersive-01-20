@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
+    <div>this is very handy</div>
     <form action="">
         <input type="text" id="m">
-
         <input type="submit" />
+
     </form>
 
     <ul id="messages"></ul>
 
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
 
-   <script>
+    <script>
 
-       let socket = io();
+        let socket = io();
 
-       //emit
+        //emit
+
 
         let form = document.querySelector('form');
 
         form.addEventListener('submit', (e) => {
-          
+
             e.preventDefault();
 
             let m = document.getElementById('m')
@@ -37,19 +41,20 @@
         })
 
 
-       //receive
-       //msg is new broadcasted message from server
-       socket.on('chat message', (msg)=>{
+        //receive
+        //msg is new broadcasted message from server
+        socket.on('chat message', (msg) => {
 
             let messages = document.getElementById('messages');
 
-            let liTag= messages.innerHTML + `<li>${msg}</li>`;
+            let liTag = messages.innerHTML + `<li>${msg}</li>`;
 
             messages.innerHTML = liTag;
-            
-       })
+
+        })
 
 
-   </script>
+    </script>
 </body>
+
 </html>
