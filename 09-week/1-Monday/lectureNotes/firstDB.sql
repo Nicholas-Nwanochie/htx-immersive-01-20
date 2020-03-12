@@ -94,6 +94,7 @@
 
 -- SELECT * FROM student2 ORDER BY name ASC LIMIT 5 OFFSET 5;
 
+-- SELECT * FROM student2 ORDER BY name ASC LIMIT 5 OFFSET 5;
 
 
 
