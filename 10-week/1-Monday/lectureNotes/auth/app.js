@@ -3,10 +3,20 @@ const app = express();
 const bodyParser = require('body-parser');
 const bcrypt = require('bcryptjs');
 let db = require('./models');
+let sessions = require('express-session');
+let cookieParser = require('cookie-parser');
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
+app.use(cookieParser());
+app.use(sessions(
+  {
+    secret: 'my puppy',
+    cookie: { secure: false, maxAge: 14 * 24 * 60 * 60 * 1000 }
+
+  }
+));
 
 app.use(require('./routes/'));
 app.use(require('./routes/blogs.js'));
@@ -14,6 +24,14 @@ app.use(require('./routes/editblogs.js'));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
+
+let auth = (req, res, next) => {
+
+  //if there session then allow user to see page
+
+  //otherwise redirect user to /login
+
+}
 
 //node receiveds request =>  middleware =>request, response
 app.get('/login', (req, res) => {
@@ -24,6 +42,7 @@ app.get('/login', (req, res) => {
 app.post('/login', (req, res) => {
 
   let username = req.body.username;
+
   let password = req.body.password;
 
   db.users.findAll({ where: { username: username } })
@@ -35,8 +54,20 @@ app.post('/login', (req, res) => {
         //user has been found,
 
         //test the pasword
-        //forwarded to protected page
-        res.redirect('/index');
+
+        bcrypt.compare(password, results[0].password, (err, response) => {
+
+          console.log(results[0].password);
+          console.log(password);
+
+          if (response) {
+            req.session.userid = username;
+            res.redirect('/');
+          }
+          else {
+            res.redirect('/error')
+          }
+        })
       }
       else {
         res.redirect('/registration')
@@ -62,6 +93,11 @@ app.get('/registration', (req, res) => {
   })
 })
 
+
+app.get('/protected', (req, res) => {
+
+  res.send('protected')
+})
 
 
 
@@ -95,6 +131,7 @@ app.post('/registration', (req, res) => {
     .then((user) => {
 
       // res.send('post registration');
+
       res.redirect('/login')
     })
     .catch(error => {
@@ -107,7 +144,7 @@ app.post('/registration', (req, res) => {
 
 app.get('/error', (req, res) => {
 
-  res.send('error duplicate entry')
+  res.send('error')
 })
 
 
