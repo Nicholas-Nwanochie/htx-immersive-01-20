@@ -10,9 +10,10 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 app.use(cookieParser());
+
 app.use(sessions(
   {
-    secret: 'my puppy',
+    secret: 'slkdjfa;lj;lakjsd;lfkj',
     cookie: { secure: false, maxAge: 14 * 24 * 60 * 60 * 1000 }
 
   }
@@ -24,12 +25,17 @@ app.use(require('./routes/editblogs.js'));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
-
 let auth = (req, res, next) => {
 
   //if there session then allow user to see page
-
   //otherwise redirect user to /login
+
+  if (req.session.userid) {
+    next();
+  }
+  else {
+    res.redirect('/login');
+  }
 
 }
 
@@ -77,6 +83,15 @@ app.post('/login', (req, res) => {
   // res.send('post login')
 })
 
+
+app.get('/logout', (req, res) => {
+
+  req.session.destroy((err) => {
+    res.redirect('/')
+  })
+
+})
+
 app.get('/registration', (req, res) => {
 
   let error = req.query.error;
@@ -94,11 +109,29 @@ app.get('/registration', (req, res) => {
 })
 
 
-app.get('/protected', (req, res) => {
+app.get('/protected', auth, (req, res) => {
 
   res.send('protected')
+});
+
+app.all('/admin/*', auth, (req, res, next) => {
+  next();
 })
 
+
+app.get('/admin/dashboard', (req, res) => {
+
+  res.send('admin dashboard')
+})
+
+app.get('/admin/user', (req, res) => {
+
+  res.send('admin user')
+})
+
+app.get('/admin/timesheet', (req, res) => {
+  res.send('admin timecard')
+})
 
 
 app.post('/registration', (req, res) => {
