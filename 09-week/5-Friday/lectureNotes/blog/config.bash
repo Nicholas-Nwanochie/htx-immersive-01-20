@@ -6,4 +6,11 @@
 # sequelize model:generate --name blogs --attributes title:string,body:string
 
 
-sequelize model:generate --name dcTest --attributes title:string,isValid:boolean,count:integer
+# sequelize model:generate --name dcTest --attributes title:string,isValid:boolean,count:integer
+
+# sequelize model:generate --name test --attributes title:string,count:integer,firstname:string,lastname:string
+
+sequelize model:generate --name person --attributes title:string 
+sequelize model:generate --name octopus --attributes title:string 
+sequelize model:generate --name kids --attributes title:string 
+sequelize model:generate --name tooth --attributes title:string

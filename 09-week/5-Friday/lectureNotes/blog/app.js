@@ -12,9 +12,6 @@ db.blogs.findAll({ include: [{ model: db.author }] })
 
     })
 
-
-
-
 // // db.categories.findAll()
 // //     .then(results => {
 

@@ -1,23 +1,9 @@
 {
   "development": {
     "username": "postgres",
-    "password": null,
-    "database": "auth2020",
-    "host": "127.0.0.1",
+    "password": "Vfr45tgB",
+    "database": "postgres",
+    "host": "mydbinstance.cb9fxsxnvekd.us-east-2.rds.amazonaws.com",
     "dialect": "postgres"
-  },
-  "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
   }
 }
