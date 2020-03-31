@@ -1,0 +1,36 @@
+
+.keypad{
+    width: 70px;
+    height: 70px;
+    background-color: lightgrey;
+    color: #666666;
+    margin: 5px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.specialKey{
+    background-color: orange;
+    font-weight: bold;
+}
+
+.zero{
+    margin: 5px;
+    width: 150px;
+}
+
+.window{
+    width: 310px;
+    height: 70px;
+    color: white;
+    background-color: #666666;
+    margin-left:5px;
+    padding: 10px;
+    font-size: 30px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+
+}
