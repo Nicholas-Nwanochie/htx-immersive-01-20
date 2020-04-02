@@ -34,9 +34,11 @@ class TodoList extends Component {
         tasks.push(input);
 
         this.setState({
-            tasks: tasks
+            tasks: tasks,
+            inputTxt: ""
         }, () => {
             console.log(this.state.tasks);
+
         })
 
         // console.log(this.state.tasks);
@@ -64,14 +66,14 @@ class TodoList extends Component {
             <div className="todo-form">
                 {/* {this.state.inputTxt} */}
                 <br />
-                <input type="text" onChange={this.handleInput} />
+                <input type="text" value={this.state.inputTxt} onChange={this.handleInput} />
 
                 <button onClick={this.addTaskItem}>Add Task</button>
 
                 <br />
 
                 <ul>
-                    <li></li>
+                    {taskList}
                 </ul>
             </div>
         )
