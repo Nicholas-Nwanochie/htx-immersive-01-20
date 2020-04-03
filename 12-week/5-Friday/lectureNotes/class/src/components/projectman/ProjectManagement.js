@@ -1,7 +1,8 @@
 
 import React, { Component } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import AddProject from './AddProject'
+import AddProject from './AddProject';
+import Project from './Project';
 
 class ProjectManagement extends Component {
 
@@ -40,9 +41,11 @@ class ProjectManagement extends Component {
 
     handleAddProject = (newProject) => {
 
-        let oldProjects = this.state.projects;
+        let oldProjects = [...this.state.projects];
 
         oldProjects.push(newProject);
+
+        console.log("state after push: ", this.state.projects);
 
         this.setState({
 
@@ -52,6 +55,20 @@ class ProjectManagement extends Component {
         })
     }
 
+    handleDeleteProject = (id) => {
+
+        let oldProjects = this.state.projects;
+
+        let index = oldProjects.findIndex((pObj) => {
+            return pObj.id === id
+        })
+
+        oldProjects.splice(index, 1);
+
+        this.setState({
+            projects: oldProjects
+        })
+    }
 
 
     render() {
@@ -59,6 +76,8 @@ class ProjectManagement extends Component {
         return (
             <>
                 <AddProject addProject={(project) => { this.handleAddProject(project) }} />
+
+                <Project projects={this.state.projects} onDelete={(id) => { this.handleDeleteProject(id) }} />
             </>
         )
     }
