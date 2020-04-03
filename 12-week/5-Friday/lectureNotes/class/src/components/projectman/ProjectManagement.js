@@ -57,7 +57,7 @@ class ProjectManagement extends Component {
 
     handleDeleteProject = (id) => {
 
-        let oldProjects = this.state.projects;
+        let oldProjects = [...this.state.projects];
 
         let index = oldProjects.findIndex((pObj) => {
             return pObj.id === id
