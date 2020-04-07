@@ -1,5 +1,7 @@
 
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import deleteProduct from '../actions/deleteProduct'
 
 class Cart extends Component {
     render() {
@@ -18,7 +20,13 @@ class Cart extends Component {
                     <tbody>
 
                         {
-                            {/* //map through global data */ }
+                            this.props.productCart.map((obj, index) => {
+                                return <tr key={index}>
+                                    <td>{obj.productName}</td>
+                                    <td>{obj.productPrice}</td>
+                                    <td onClick={() => { this.props.onDeleteProduct(obj) }}>Delete</td>
+                                </tr>
+                            })
                         }
                     </tbody>
 
@@ -28,4 +36,20 @@ class Cart extends Component {
     }
 }
 
-export default Cart
+let mapStateToProps = (state) => {
+    return {
+        totalCost: state.totalCost,
+        productCart: state.productCart
+    }
+
+}
+
+let mapDispatchToProps = (dispatch) => {
+
+    return {
+        onDeleteProduct: (productData) => dispatch(deleteProduct(productData))
+    }
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Cart)
