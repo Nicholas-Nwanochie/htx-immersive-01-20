@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import addProduct from '../actions/addProduct'
+import addProduct from '../actions/addProduct';
+import './styles.css'
 
 class AddProduct extends Component {
 
@@ -44,26 +45,32 @@ class AddProduct extends Component {
             productPrice: this.state.productPrice
         })
 
+        this.setState({
+            productName: "",
+            productPrice: 0
+        })
+
     }
 
 
     render() {
         return (
-            <>
+            <div className="main">
                 Add Product
 
                 <form onSubmit={this.submitProductHandler} >
 
                     <label>Product name</label>
 
-                    <input type="text" placeholder="ProductName" onChange={this.productNameChangeHandler} />
+                    {/* {this.state.productName}<br /> */}
+                    <input value={this.state.productName} type="text" placeholder="ProductName" onChange={this.productNameChangeHandler} />
 
                     <label >Product Price</label>
 
-                    <input type="number" placeholder="product price" onChange={this.productPriceChangeHandler} />
+                    <input value={this.state.productPrice} type="number" placeholder="product price" onChange={this.productPriceChangeHandler} />
                     <button>Submit</button>
                 </form>
-            </>
+            </div>
         )
     }
 }

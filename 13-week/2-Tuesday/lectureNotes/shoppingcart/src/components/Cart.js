@@ -1,12 +1,14 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import deleteProduct from '../actions/deleteProduct'
+import deleteProduct from '../actions/deleteProduct';
+import './styles.css'
+
 
 class Cart extends Component {
     render() {
         return (
-            <>
+            <div className="main">
                 <table>
                     <thead>
                         <tr>
@@ -31,7 +33,9 @@ class Cart extends Component {
                     </tbody>
 
                 </table>
-            </>
+
+                <h3>{this.props.totalCost}</h3>
+            </div>
         )
     }
 }
@@ -44,6 +48,7 @@ let mapStateToProps = (state) => {
 
 }
 
+// store.dispatch(addPerson("Austin", 22))
 let mapDispatchToProps = (dispatch) => {
 
     return {

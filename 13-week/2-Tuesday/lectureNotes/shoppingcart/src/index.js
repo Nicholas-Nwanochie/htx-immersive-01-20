@@ -10,9 +10,12 @@ import BaseLayout from './components/layout/BaseLayout';
 import reducer from './reducers/cartReducer';
 
 
+//redux
+
 let store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 
+//react
 ReactDOM.render(
 
   <Provider store={store}>
